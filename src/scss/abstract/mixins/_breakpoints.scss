@@ -1,0 +1,15 @@
+@use "sass:meta";
+
+@use "bootstrap/scss/mixins/breakpoints" as *;
+
+// Iterate in a map of breakpoints including a media-breakpoint-up of Bootstrap and return
+// the infix of that breakpoint.
+@mixin iterate-media-breakpoint-up-infix($breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+      @content($infix);
+    }
+  }
+}

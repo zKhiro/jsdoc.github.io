@@ -1,0 +1,17 @@
+@use "../variables/typography" as font;
+
+@mixin apply-header-letter-spacing() {
+  @for $header from 1 to 6 {
+    h#{$header} {
+      letter-spacing: font.$headings-letter-spacing;
+    }
+  }
+}
+
+@mixin create-font-size-utils($font-sizes, $breakpoints) {
+  @include iterate-media-breakpoint-up-infix($breakpoints) using ($infix) {
+    @each $size, $value in $font-sizes {
+      .font-size#{$infix}-#{$size} { font-size: $value; }
+    }
+  }
+}

@@ -9,8 +9,6 @@
 
 @include text-emphasis-variant(".text-primary", colors.$primary-darker, true);
 
-@for $header from 1 to 6 {
-  h#{$header} {
-    letter-spacing: font.$headings-letter-spacing;
-  }
-}
+@include apply-header-letter-spacing();
+
+@include create-font-size-utils((14px: $font-size-sm, base: $font-size-base, 18px: $font-size-lg), $grid-breakpoints);
