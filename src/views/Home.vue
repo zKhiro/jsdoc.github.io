@@ -1,11 +1,11 @@
 <script>
-import { HomeI18n } from '@/locales/home';
+  import { HomeI18n } from '@/locales/home';
 
-export default {
-  i18n: {
-    sharedMessages: HomeI18n,
-  },
-};
+  export default {
+    i18n: {
+      sharedMessages: HomeI18n,
+    },
+  };
 </script>
 <template>
   <div class="position-relative overflow-hidden">
@@ -32,52 +32,52 @@ export default {
   </div>
 </template>
 <style lang="scss" scoped>
-@use '@sass/abstract/mixin' as m;
-@use '@sass/abstract/functions' as f;
+  @use '@sass/abstract/mixin' as m;
+  @use '@sass/abstract/functions' as f;
 
-h1 {
-  font-size: f.px-to-rem(64);
-  margin-bottom: f.px-to-rem(40);
-}
-
-.button-row {
-  margin-top: f.px-to-rem(124);
-}
-
-.background-image {
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  background-image: url('@images/background.png');
-  background-repeat: repeat;
-  background-size: 50%;
-  left: 0;
-  opacity: 0.04;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-
-  @include m.animation(bg-move, 25s) {
-    from {
-      top: 0;
-    }
-    to {
-      top: 100vh;
-    }
+  h1 {
+    font-size: f.px-to-rem(64);
+    margin-bottom: f.px-to-rem(40);
   }
 
-  &:first-of-type {
-    bottom: 100vh;
-    top: auto;
+  .button-row {
+    margin-top: f.px-to-rem(124);
+  }
+
+  .background-image {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url('@images/background.png');
+    background-repeat: repeat;
+    background-size: 50%;
+    left: 0;
+    opacity: 0.04;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 
     @include m.animation(bg-move, 25s) {
       from {
-        bottom: 100vh;
+        top: 0;
       }
       to {
-        bottom: 0;
+        top: 100vh;
+      }
+    }
+
+    &:first-of-type {
+      bottom: 100vh;
+      top: auto;
+
+      @include m.animation(bg-move, 25s) {
+        from {
+          bottom: 100vh;
+        }
+        to {
+          bottom: 0;
+        }
       }
     }
   }
-}
 </style>
