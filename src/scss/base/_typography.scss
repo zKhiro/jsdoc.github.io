@@ -1,0 +1,16 @@
+@use "../abstract/variables/typography" as font;
+@use "../abstract/variables/colors";
+
+@import "@/assets/fonts";
+
+
+.font-weight-medium   { font-weight: $font-weight-medium; }
+.font-weight-semibold { font-weight: $font-weight-semibold; }
+
+@include text-emphasis-variant(".text-primary", colors.$primary-darker, true);
+
+@for $header from 1 to 6 {
+  h#{$header} {
+    letter-spacing: font.$headings-letter-spacing;
+  }
+}

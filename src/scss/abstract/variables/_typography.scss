@@ -1,0 +1,4 @@
+@use "../functions" as f;
+
+
+$headings-letter-spacing: f.px-to-rem(1);
