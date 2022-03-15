@@ -1,15 +1,12 @@
 import { createI18n } from 'vue-i18n';
 
+/** @todo Add global i18n. */
 const messages = {
-  en: {
-    home: {
-      slogan: 'Document your code.',
-    },
-  },
+  'en-US': {},
 };
 
 export default createI18n({
-  locale: 'en',
-  fallbackLocale: 'en',
+  locale: 'en-US',
+  fallbackLocale: 'en-US',
   messages,
 });

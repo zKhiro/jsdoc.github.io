@@ -1,15 +1,29 @@
+<script>
+import { HomeI18n } from '@/locales/home';
+
+export default {
+  i18n: {
+    sharedMessages: HomeI18n,
+  },
+};
+</script>
 <template>
   <div class="position-relative overflow-hidden">
     <div class="container-fluid flex-center flex-column vh-100">
       <h1>JSDoc</h1>
 
       <h4 class="font-weight-medium text-light">
-        {{ $t('home.slogan') }}
+        {{ $t('slogan') }}
       </h4>
 
       <div class="button-row row gap-7">
-        <RouterLink class="btn btn-primary" to="/">Get Started</RouterLink>
-        <RouterLink class="btn btn-outline-primary" to="/">Github</RouterLink>
+        <RouterLink class="btn btn-primary" to="/">
+          {{ $t('buttons.start') }}
+        </RouterLink>
+
+        <RouterLink class="btn btn-outline-primary" to="/">
+          {{ $t('buttons.github') }}
+        </RouterLink>
       </div>
     </div>
 
