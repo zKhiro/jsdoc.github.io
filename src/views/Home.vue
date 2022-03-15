@@ -8,23 +8,21 @@
   };
 </script>
 <template>
-  <div class="position-relative overflow-hidden">
-    <div class="container-fluid flex-center flex-column vh-100">
-      <h1>JSDoc</h1>
+  <div class="flex-center flex-column position-relative overflow-hidden">
+    <h1>JSDoc</h1>
 
-      <h4 class="font-weight-medium text-light">
-        {{ $t('slogan') }}
-      </h4>
+    <h4 class="font-weight-medium text-light">
+      {{ $t('slogan') }}
+    </h4>
 
-      <div class="button-row row gap-7">
-        <RouterLink class="btn btn-primary" to="/">
-          {{ $t('buttons.start') }}
-        </RouterLink>
+    <div class="button-row row gap-7">
+      <RouterLink class="btn btn-primary" to="/">
+        {{ $t('buttons.start') }}
+      </RouterLink>
 
-        <RouterLink class="btn btn-outline-primary" to="/">
-          {{ $t('buttons.github') }}
-        </RouterLink>
-      </div>
+      <RouterLink class="btn btn-outline-primary" to="/">
+        {{ $t('buttons.github') }}
+      </RouterLink>
     </div>
 
     <span class="background-image vw-100 vh-100"></span>
@@ -57,7 +55,7 @@
     top: 0;
     z-index: -1;
 
-    @include m.animation(bg-move, 25s) {
+    @include ma.animation(bg-move, 25s) {
       from {
         top: 0;
       }
@@ -70,7 +68,7 @@
       bottom: 100vh;
       top: auto;
 
-      @include m.animation(bg-move, 25s) {
+      @include ma.animation(bg-move, 25s) {
         from {
           bottom: 100vh;
         }
