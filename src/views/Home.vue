@@ -32,7 +32,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  @use '@sass/abstract/mixin' as m;
+  @use '@sass/abstract/mixins/animations' as ma;
   @use '@sass/abstract/functions' as f;
 
   h1 {
