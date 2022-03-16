@@ -25,8 +25,8 @@
       </RouterLink>
     </div>
 
-    <span class="background-image vw-100 vh-100"></span>
-    <span class="background-image vw-100 vh-100"></span>
+    <span class="background-image vw-100 h-100"></span>
+    <span class="background-image vw-100 h-100"></span>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -43,6 +43,8 @@
   }
 
   .background-image {
+    $animation-duration: 25s;
+
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     background-image: url('@images/background.png');
@@ -52,25 +54,23 @@
     opacity: 0.04;
     pointer-events: none;
     position: absolute;
-    top: 0;
     z-index: -1;
 
-    @include ma.animation(bg-move, 25s) {
+    @include ma.animation(bg-move, $animation-duration) {
       from {
         top: 0;
       }
       to {
-        top: 100vh;
+        top: 100%;
       }
     }
 
     &:first-of-type {
-      bottom: 100vh;
       top: auto;
 
-      @include ma.animation(bg-move, 25s) {
+      @include ma.animation(bg-move, $animation-duration) {
         from {
-          bottom: 100vh;
+          bottom: 100%;
         }
         to {
           bottom: 0;
