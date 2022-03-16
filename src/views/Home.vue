@@ -15,7 +15,7 @@
       {{ $t('slogan') }}
     </h4>
 
-    <div class="button-row row gap-7">
+    <div class="button-row row gap-8">
       <RouterLink class="btn btn-primary" to="/">
         {{ $t('buttons.start') }}
       </RouterLink>

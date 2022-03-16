@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main class="container-fluid d-flex flex-column vh-100">
+  <main class="container-fluid d-flex flex-column vh-100 px-0">
     <RouterView class="flex-fill" />
 
     <Footer />

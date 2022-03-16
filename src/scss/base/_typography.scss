@@ -11,4 +11,4 @@
 
 @include apply-header-letter-spacing();
 
-@include create-font-size-utils((14px: $font-size-sm, base: $font-size-base, 18px: $font-size-lg), $grid-breakpoints);
+@include create-font-size-utils((14px: $font-size-sm, base: $font-size-base, 24px: $font-size-lg), $grid-breakpoints);
