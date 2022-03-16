@@ -1,13 +1,9 @@
 <script setup>
-  import Footer from '@/components/Footer.vue';
+  import Main from './views/Main.vue';
 </script>
 
 <template>
-  <main class="container-fluid d-flex flex-column vh-100 px-0">
-    <RouterView class="flex-fill" />
-
-    <Footer />
-  </main>
+  <Main />
 </template>
 
 <style lang="scss">

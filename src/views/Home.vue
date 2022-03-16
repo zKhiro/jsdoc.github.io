@@ -8,26 +8,28 @@
   };
 </script>
 <template>
-  <div class="flex-center flex-column position-relative overflow-hidden">
-    <h1>JSDoc</h1>
+  <section class="flex-center flex-column position-relative overflow-hidden">
+    <header>
+      <h1>JSDoc</h1>
 
-    <h4 class="font-weight-medium text-light">
-      {{ $t('slogan') }}
-    </h4>
+      <h4 class="font-weight-medium text-light">
+        {{ $t('slogan') }}
+      </h4>
+    </header>
 
-    <div class="button-row row gap-8">
-      <RouterLink class="btn btn-primary" to="/">
+    <nav class="button-row row gap-8">
+      <RouterLink class="btn btn-primary" to="/navbar">
         {{ $t('buttons.start') }}
       </RouterLink>
 
       <RouterLink class="btn btn-outline-primary" to="/">
         {{ $t('buttons.github') }}
       </RouterLink>
-    </div>
+    </nav>
 
     <span class="background-image vw-100 h-100"></span>
     <span class="background-image vw-100 h-100"></span>
-  </div>
+  </section>
 </template>
 <style lang="scss" scoped>
   @use '@sass/abstract/mixins/animations' as ma;
