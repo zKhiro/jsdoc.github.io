@@ -4,8 +4,8 @@
 @import "@/assets/fonts";
 
 
-.font-weight-medium   { font-weight: $font-weight-medium; }
-.font-weight-semibold { font-weight: $font-weight-semibold; }
+.font-weight-medium   { font-weight: $font-weight-medium !important; }
+.font-weight-semibold { font-weight: $font-weight-semibold !important; }
 
 @include text-emphasis-variant(".text-primary", colors.$primary-darker, true);
 
