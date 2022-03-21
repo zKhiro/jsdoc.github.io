@@ -1,0 +1,16 @@
+@use "../../vendor/bootstrap" as b;
+@use "../functions" as f;
+@use "colors";
+
+$navbar-width:                  f.px-to-rem(320);
+
+$link-bg-color-hover:           lighten(b.$primary, 21%);
+$link-color-hover:              colors.$primary-darker;
+
+$sub-link-font-size:            b.$font-size-sm;
+$sub-link-padding-y:            f.px-to-rem(2);
+$sub-link-border-size:          f.px-to-rem(2);
+$sub-link-border-color:         b.$gray-300;
+$sub-link-border-color-hover:   b.$primary;
+$sub-link-border-color-active:  $sub-link-border-color-hover;
+$sub-link-border-size-active:   $sub-link-border-size * 1.5;

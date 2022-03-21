@@ -1,3 +1,4 @@
+@use "../../abstract/functions" as f;
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -71,6 +72,7 @@ $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
 $light:         #545C72;
+$lighten:         #9198AB;
 $dark:          #1E2537;
 
 $theme-colors: ();
@@ -83,6 +85,7 @@ $theme-colors: map-merge(
     "warning":    $warning,
     "danger":     $danger,
     "light":      $light,
+    "lighten":    $lighten,
     "dark":       $dark
   ),
   $theme-colors
@@ -694,8 +697,8 @@ $zindex-tooltip:                    1070;
 
 // Navs
 
-$nav-link-padding-y:                .5rem;
-$nav-link-padding-x:                1rem;
+$nav-link-padding-y:                f.px-to-rem(6);
+$nav-link-padding-x:                .5rem !important;
 $nav-link-disabled-color:           $gray-600;
 
 $nav-tabs-border-color:             $gray-300;
@@ -710,14 +713,14 @@ $nav-pills-border-radius:           $border-radius;
 $nav-pills-link-active-color:       $component-active-color;
 $nav-pills-link-active-bg:          $component-active-bg;
 
-$nav-divider-color:                 $gray-200;
+$nav-divider-color:                 $gray-300;
 $nav-divider-margin-y:              $spacer * .5;
 
 
 // Navbar
 
-$navbar-padding-y:                  $spacer * .5;
-$navbar-padding-x:                  $spacer;
+$navbar-padding-y:                  $spacer * 1.5;
+$navbar-padding-x:                  $navbar-padding-y;
 
 $navbar-nav-link-padding-x:         .5rem;
 
@@ -741,8 +744,8 @@ $navbar-dark-disabled-color:        rgba($white, .25);
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 $navbar-dark-toggler-border-color:  rgba($white, .1);
 
-$navbar-light-color:                rgba($black, .5);
-$navbar-light-hover-color:          rgba($black, .7);
+$navbar-light-color:                $dark;
+$navbar-light-hover-color:          $dark;
 $navbar-light-active-color:         rgba($black, .9);
 $navbar-light-disabled-color:       rgba($black, .3);
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
