@@ -47,7 +47,7 @@
 
   // to-do: check if there is a better way to implement the background movement.
   .background-image {
-    $animation-duration:        15s;
+    $animation-duration:        25s;
 
     animation-iteration-count:  infinite;
     animation-timing-function:  linear;
