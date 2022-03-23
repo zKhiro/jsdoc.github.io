@@ -9,7 +9,7 @@
 </script>
 <template>
   <section class="flex-center flex-column position-relative overflow-hidden">
-    <header>
+    <header class="text-center">
       <h1>JSDoc</h1>
 
       <h4 class="font-weight-medium text-light">
@@ -18,7 +18,7 @@
     </header>
 
     <nav class="button-row row gap-8">
-      <RouterLink class="btn btn-primary" to="/navbar">
+      <RouterLink class="btn btn-primary" to="/getting-started">
         {{ $t('buttons.start') }}
       </RouterLink>
 
@@ -27,13 +27,14 @@
       </RouterLink>
     </nav>
 
-    <span class="background-image vw-100 h-100"></span>
-    <span class="background-image vw-100 h-100"></span>
+    <span class="background-image vh-100"></span>
+    <span class="background-image vh-100"></span>
   </section>
 </template>
 <style lang="scss" scoped>
   @use '@sass/abstract/mixins/animations' as ma;
   @use '@sass/abstract/functions' as f;
+  @use '@sass/vendor/bootstrap/mixins/breakpoints' as b;
 
   h1 {
     font-size: f.px-to-rem(64);
@@ -44,38 +45,38 @@
     margin-top: f.px-to-rem(124);
   }
 
+  // to-do: check if there is a better way to implement the background movement.
   .background-image {
-    $animation-duration: 25s;
+    $animation-duration:        15s;
 
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    background-image: url('@images/background.png');
-    background-repeat: repeat;
-    background-size: 50%;
-    left: 0;
-    opacity: 0.04;
-    pointer-events: none;
-    position: absolute;
-    z-index: -1;
+    animation-iteration-count:  infinite;
+    animation-timing-function:  linear;
+    background-image:           url('@images/background.png');
+    background-repeat:          repeat;
+    background-size:            114vh;
+    left:                       0;
+    opacity:                    0.04;
+    pointer-events:             none;
+    position:                   absolute;
+    min-width:                  100vw;
+    z-index:                    -1;
 
     @include ma.animation(bg-move, $animation-duration) {
       from {
-        top: 0;
+        transform: translateY(0);
       }
       to {
-        top: 100%;
+        transform: translateY(100%);
       }
     }
 
     &:first-of-type {
-      top: auto;
-
       @include ma.animation(bg-move, $animation-duration) {
         from {
-          bottom: 100%;
+          transform: translateY(-100%);
         }
         to {
-          bottom: 0;
+          transform: translateY(0);
         }
       }
     }
