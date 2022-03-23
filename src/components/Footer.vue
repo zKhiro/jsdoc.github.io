@@ -10,8 +10,8 @@
   }
 </script>
 <template>
-  <footer class="position-relative text-center font-size-14px font-weight-light p-3 border-top">
-    <p v-html="$t('footer.copyrightSection', { openTagA: `<a class='font-weight-normal' href='https://github.com/jsdoc/jsdoc.github.io/graphs/contributors' target='_blank'>`, closeTagA: '</a>' })"></p>
+  <footer class="position-relative text-center font-size-14px font-weight-light border-top">
+    <p class="mb-1 mb-md-0" v-html="$t('footer.copyrightSection', { openTagA: `<a class='font-weight-normal' href='https://github.com/jsdoc/jsdoc.github.io/graphs/contributors' target='_blank'>`, closeTagA: '</a>' })"></p>
 
     <p v-html="$t('footer.licenseSection', { openTagA: `<a class='font-weight-normal' href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>`, closeTagA: '</a>' })"></p>
 
@@ -25,6 +25,8 @@
 
 <style lang="scss" scoped>
   footer {
+    padding: 1rem 4.5rem;
+
     * {
       margin-bottom: 0;
     }
