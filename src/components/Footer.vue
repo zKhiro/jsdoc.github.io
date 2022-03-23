@@ -24,6 +24,9 @@
 </template>
 
 <style lang="scss" scoped>
+  @use "@sass/vendor/bootstrap/mixins/breakpoints" as b;
+
+
   footer {
     padding: 1rem 4.5rem;
 
@@ -33,6 +36,10 @@
 
     p {
       line-height: 1.1;
+
+      @include b.media-breakpoint-down(sm) {
+        line-height: 1.2;
+      }
     }
 
     .icons-section {
