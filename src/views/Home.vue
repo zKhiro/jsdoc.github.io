@@ -8,7 +8,7 @@
   };
 </script>
 <template>
-  <section class="flex-center flex-column position-relative overflow-hidden">
+  <section class="home-section flex-center flex-column position-relative overflow-hidden">
     <header class="text-center">
       <h1>JSDoc</h1>
 
@@ -32,9 +32,19 @@
   </section>
 </template>
 <style lang="scss" scoped>
+  @use '@sass/abstract/variables/colors';
   @use '@sass/abstract/mixins/animations' as ma;
   @use '@sass/abstract/functions' as f;
   @use '@sass/vendor/bootstrap/mixins/breakpoints' as b;
+
+
+  .home-section {
+    background-color: colors.$primary-lighter;
+
+    > * {
+      z-index: 1;
+    }
+  }
 
   h1 {
     font-size: f.px-to-rem(64);
@@ -59,7 +69,7 @@
     pointer-events:             none;
     position:                   absolute;
     min-width:                  100vw;
-    z-index:                    -1;
+    z-index:                    0;
 
     @include ma.animation(bg-move, $animation-duration) {
       from {
