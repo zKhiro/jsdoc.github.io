@@ -20,8 +20,7 @@
     },
     methods: {
       async fetchNavItems() {
-        this.requestNavLinks.useGet()
-          .finally(_ => this.requestNavLinks.loading = false)
+        this.requestNavLinks.getJson()
           .then(_ => {
             Object.keys(this.requestNavLinks.response).forEach(responseKeys => {
               this.navLinks.push({
@@ -29,7 +28,8 @@
                 links: this.requestNavLinks.response[responseKeys],
               });
             });
-          });
+          })
+          .finally(_ => this.requestNavLinks.loading = false);
       },
 
       translateNavbar(e) {
