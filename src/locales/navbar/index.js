@@ -20,6 +20,9 @@ export const NavbarI18n = {
       },
       {
         title: "Essentials",
+        "about-namepaths": {
+          label: "About Namepaths",
+        }
       }
     ],
   },

@@ -58,4 +58,3 @@ By default, JSDoc uses the built-in "default" template to turn the documentation
 jsdoc book.js
 ```
 This command will create a directory named `out/` in the current working directory. Within that directory, you will find the generated HTML pages.
-

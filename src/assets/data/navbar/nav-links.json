@@ -6,5 +6,7 @@
       "generate-a-website"
     ]
   },
-  "essentials": {}
+  "essentials": {
+    "about-namepaths": []
+  }
 }
