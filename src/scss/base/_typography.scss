@@ -4,6 +4,8 @@
 @import "@/assets/fonts";
 
 
+h1 { font-weight: $font-weight-bold; }
+
 .font-weight-medium   { font-weight: $font-weight-medium !important; }
 .font-weight-semibold { font-weight: $font-weight-semibold !important; }
 
